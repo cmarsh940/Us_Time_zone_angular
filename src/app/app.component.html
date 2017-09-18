@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--//-.-. .- -- . .-. --- -. / -- .- .-. ... .... .- .-.. .-..//-->
+<div style="text-align:center">
+  <h1>Welcome to {{title}}!</h1>
+</div>
+<!--//-.-. .- -- . .-. --- -. / -- .- .-. ... .... .- .-.. .-..//-->
+<button [ngClass]="{'active': lastTimeZone === 'PST'}" (click)='changeTime("PST")'>PST</button>
+<button [ngClass]="{'active': lastTimeZone === 'MST'}" (click)='changeTime("MST")'>MST</button>
+<button [ngClass]="{'active': lastTimeZone === 'CST'}" (click)='changeTime("CST")'>CST</button>
+<button [ngClass]="{'active': lastTimeZone === 'EST'}" (click)='changeTime("EST")'>EST</button>
+<button (click)='changeTime()'>Clear</button>
+<!--//-.-. .- -- . .-. --- -. / -- .- .-. ... .... .- .-.. .-..//-->
+{{ time | date:'medium'}}
+
